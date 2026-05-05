@@ -1,4 +1,4 @@
-package org.example.phase0_java_platform.group1_array_loop.Ex1;
+package org.example.phase0_java_platform.group1_array_loop.ex1;
 
 public class FindNumbersWithEvenNumberOfDigits {
 

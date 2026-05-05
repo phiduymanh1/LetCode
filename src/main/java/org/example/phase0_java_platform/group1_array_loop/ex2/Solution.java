@@ -1,4 +1,4 @@
-package org.example.phase0_java_platform.group1_array_loop.Ex2;
+package org.example.phase0_java_platform.group1_array_loop.ex2;
 
 import java.util.Arrays;
 
