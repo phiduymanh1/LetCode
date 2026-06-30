@@ -132,3 +132,6 @@ Một thắc mắc kinh điển: *"Tại sao lần đầu tiên chạy vào `do-
    * Toàn bộ các luồng còn lại bị khựng lại một vài chu kỳ xung nhịp. Khi được vào so sánh, tụi nó thấy giá trị thực tế trong ô nhớ đã bị đứa đi trước sửa thành `1` rồi (khác với giá trị `0` tụi nó đọc ban đầu) $\rightarrow$ Hàm CAS trả về `false`.
 3. **Giá trị kỳ vọng $A$ thay đổi thế nào ở các lượt lặp sau?**
    Do hàm CAS trả về `false`, điều kiện `while(!false)` trở thành `while(true)`. Toàn bộ các luồng thất bại bị ép phải **bắt đầu lượt lặp thứ 2**. Lúc này, tụi nó quay lại dòng đầu tiên của thân vòng lặp: `currentValue = this.value;`. Dòng này giúp các luồng **đọc lại giá trị mới nhất vừa bị cập nhật trong bộ nhớ (lúc này là `1`)**. Giá trị kỳ vọng $A$ được cập nhật mới từ đây, giúp luồng sẵn sàng cho một cuộc đua (lượt lặp) tiếp theo.
+
+# To learn later
+- Cách biến được lưu trong RAM (cpu)
